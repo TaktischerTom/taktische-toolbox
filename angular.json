@@ -17,7 +17,11 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/taktische-toolbox",
+            "outputPath": {
+              "base": "docs",
+              "browser": ""
+            },
+            "baseHref": "/taktische-toolbox/",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
