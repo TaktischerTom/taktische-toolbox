@@ -6,8 +6,8 @@
   tailwindPreserveWhitespace: true,
   plugins: [
     //    '@ianvs/prettier-plugin-sort-imports',
-    'prettier-plugin-organize-attributes',
-    'prettier-plugin-tailwindcss',
+    //    'prettier-plugin-organize-attributes',
+    'prettier-plugin-tailwindcss'
   ],
   "tailwindConfig": "./tailwind.config.js"
 }
