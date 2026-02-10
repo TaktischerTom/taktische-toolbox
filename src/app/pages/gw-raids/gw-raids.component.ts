@@ -27,7 +27,9 @@ export class GwRaidsComponent {
 
   constructor(private http: HttpClient) {
     this.http
-      .get('assets/data/raid-bosses.csv', { responseType: 'text' })
+      .get('assets/data/raid-bosses.csv', {
+        responseType: 'text',
+      })
       .subscribe(
         (data) => {
           let csvToRowArray = data.split('\n')

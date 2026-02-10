@@ -9,7 +9,7 @@ type EncounterBackground = {
   }
 }
 
-const IMG = '/assets/images/gw2'
+const IMG = 'assets/images/gw2'
 
 export const ASSETS: EncounterBackground = {
   encounters: {

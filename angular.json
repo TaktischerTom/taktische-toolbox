@@ -31,13 +31,13 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "public",
-                "output": "/assets/"
+                "input": "public/assets",
+                "output": "assets/"
               },
               {
                 "glob": "**/*",
                 "input": "./node_modules/@ant-design/icons-angular/src/inline-svg/",
-                "output": "/assets/"
+                "output": "assets/"
               }
             ],
             "styles": ["src/theme.less", "src/styles.scss"],
