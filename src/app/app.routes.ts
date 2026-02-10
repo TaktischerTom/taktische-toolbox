@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router'
 import { StartLayoutComponent } from './components/layouts/start-layout/start-layout.component'
 import { StartComponent } from './pages/start/start.component'
+import { GwRaidsComponent } from './pages/gw-raids/gw-raids.component'
 
 export const routes: Routes = [
   {
@@ -11,6 +12,16 @@ export const routes: Routes = [
         path: '',
         pathMatch: 'full',
         component: StartComponent,
+      },
+    ],
+  },
+  {
+    path: 'raids',
+    component: StartLayoutComponent,
+    children: [
+      {
+        path: '',
+        component: GwRaidsComponent,
       },
     ],
   },
