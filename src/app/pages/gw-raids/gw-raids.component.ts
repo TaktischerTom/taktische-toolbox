@@ -46,10 +46,9 @@ export class GwRaidsComponent {
               active: true,
             })
           }
-          console.log(this.raidEncounterList)
         },
         (error) => {
-          console.log(error)
+          console.error(error)
         }
       )
   }

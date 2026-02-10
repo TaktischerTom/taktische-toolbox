@@ -42,7 +42,6 @@ export const ASSETS: EncounterBackground = {
 
 export function getEncounterBackground(encounter: RaidEncounter): string {
   if (encounter.origin === 'raid') {
-    console.log(encounter.name, ASSETS.wings[encounter.wing!])
     return ASSETS.wings[encounter.wing!] ?? ASSETS.wings['W1']
   } else {
     return ASSETS.encounters[encounter.id] ?? ASSETS.encounters['ah']
