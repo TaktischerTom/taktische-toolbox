@@ -24,4 +24,16 @@
   >
     CONVERT THIS YEAH
   </button>
+  <div class="text-wrap">
+    @if (convertedString) {
+      <p class="overflow-scroll">{{ convertedString }}</p>
+    }
+  </div>
+  <button
+    class="cursor-pointer rounded bg-purple-500 p-4 hover:bg-purple-600 active:bg-purple-700"
+    type="button"
+    (click)="copyToClip()"
+  >
+    COPY NEW CODE TO CLIPBOARD
+  </button>
 </div>

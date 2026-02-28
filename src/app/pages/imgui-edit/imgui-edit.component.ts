@@ -11,14 +11,17 @@ export class ImguiEditComponent {
   public stringInput?: string
   public borderRadius?: number
   public code?: Float32Array<ArrayBufferLike>
+  public convertedString?: string
 
   public convert() {
     if (!this.stringInput || !this.borderRadius) return
 
     this.code = this.decodeImGuiStyle(this.stringInput)
     this.setStyleValue(3, this.borderRadius) // window radius
-    console.log(this.encodeImGuiStyle(this.code!))
+
+    this.convertedString = this.encodeImGuiStyle(this.code!)
     console.log(this.code)
+    console.log('CONVERTED', this.convertedString)
   }
 
   public decodeImGuiStyle(base64: string): Float32Array {
@@ -58,5 +61,11 @@ export class ImguiEditComponent {
     }
 
     this.code[index] = value
+  }
+
+  public copyToClip(): void {
+    if (!this.convertedString) return
+
+    navigator.clipboard.writeText(this.convertedString)
   }
 }
